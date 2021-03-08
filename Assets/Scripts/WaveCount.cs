@@ -14,6 +14,6 @@ public class WaveCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "Wave: " + EnemySpawn.waveNum;
+        GetComponent<Text>().text = "Wave: " + EnemySpawnNew.waveNum;
     }
 }

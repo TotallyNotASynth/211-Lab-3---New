@@ -24,7 +24,7 @@ public class TowerNew : MonoBehaviour
     {
         quickTimer++;
 
-        if (level == levelCounter)
+        if (level == levelCounter && level < 10)
         {
             GetComponent<SpriteRenderer>().sprite = levels[level];
             stats.speed -= 10;
