@@ -10,8 +10,11 @@ public class TowerLevel
 
     public TowerLevel()
     {
+        //Attack speed
         speed = 110f;
+        //Tower money cost (wip)
         cost = 10;
+        //Level counters
         level = 0;
     }
 }

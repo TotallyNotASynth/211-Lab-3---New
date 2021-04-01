@@ -10,6 +10,7 @@ public class EnemyNew : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Calls the different behaviors based on enemy type
         Behavior();
     }
 
@@ -17,12 +18,14 @@ public class EnemyNew : MonoBehaviour
     {
         if (transform.position.y >= 6 || transform.position.y < -6)
         {
+            //Destroies obj if it goes off screen.
             Debug.Log("dead");
             EnemySpawnNew.deaths++;
             Destroy(gameObject);
         }
         if (transform.position.x >= 9 || transform.position.x < -9)
         {
+            //Destroies obj if it goes off screen.
             Debug.Log("dead");
             EnemySpawnNew.deaths++;
             Destroy(gameObject);
@@ -32,7 +35,9 @@ public class EnemyNew : MonoBehaviour
     {
         if (collision.gameObject.tag == "bullet")
         {
+            //plays sound on bullet hit
             GetComponent<AudioSource>().PlayOneShot(hit);
+            //logs death and destroies obj
             Debug.Log("dead");
             EnemySpawnNew.deaths++;
             Destroy(gameObject);
@@ -41,6 +46,7 @@ public class EnemyNew : MonoBehaviour
 
     public virtual void Behavior()
     {
+        //The void connected to the other scripts
         Debug.Log("Set Speed");
     }
 }
